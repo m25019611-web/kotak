@@ -30,7 +30,7 @@ cd "${ROOT}"
 echo ">>> Writing build.gradle"
 cat > build.gradle << 'EOF'
 plugins {
-    id 'net.fabricmc.fabric-loom-remap' version "${loom_version}"
+    id 'fabric-loom' version "${loom_version}"
     id 'maven-publish'
 }
 

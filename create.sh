@@ -512,7 +512,7 @@ EOF
 # ------------------------------------------------------------
 #  src/main/java/.../mixin/BackgroundRendererMixin.java
 # ------------------------------------------------------------
-echo ">>> Writing mixin/BackgroundRendererMixin.java"
+echo cat > "${PKG_DIR}/mixin/BackgroundRendererMixin.java" << 'EOF'
 cat > "${PKG_DIR}/mixin/BackgroundRendererMixin.java" << 'EOF'
 package com.mik_sser.blenderclient.mixin;
 

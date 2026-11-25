@@ -1,0 +1,32 @@
+name: Build Mod
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up JDK 21
+      uses: actions/setup-java@v4
+      with:
+        java-version: '21'
+        distribution: 'temurin'
+        
+    - name: Run create script
+      run: |
+        chmod +x create.sh
+        ./create.sh
+        
+    - name: Build with Gradle
+      run: |
+        cd blender-client
+        gradle wrapper --gradle-version 8.10
+        ./gradlew build
+        
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: BlenderClient-Jar
+        path: blender-client/build/libs/*.jar

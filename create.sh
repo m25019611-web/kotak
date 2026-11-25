@@ -30,7 +30,7 @@ cd "${ROOT}"
 echo ">>> Writing build.gradle"
 cat > build.gradle << 'EOF'
 plugins {
-    id 'fabric-loom' version "${loom_version}"
+    id 'net.fabricmc.fabric-loom-remap' version "${loom_version}"
     id 'maven-publish'
 }
 
@@ -79,12 +79,12 @@ cat > gradle.properties << 'EOF'
 org.gradle.jvmargs=-Xmx2G
 org.gradle.parallel=true
 
-# Fabric / Minecraft 1.21.11 versions
-minecraft_version=1.21.11
-yarn_mappings=1.21.11+build.6
-loader_version=0.19.3
-fabric_api_version=0.141.4+1.21.11
-loom_version=1.16.3
+# Fabric / Minecraft 1.21.1 versions
+minecraft_version=1.21.1
+yarn_mappings=1.21.1+build.3
+loader_version=0.16.9
+fabric_api_version=0.116.5+1.21.1
+loom_version=1.9.2
 
 # Mod metadata
 mod_version=1.0.0

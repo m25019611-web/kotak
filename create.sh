@@ -659,7 +659,6 @@ cat > "${RES_DIR}/blender-client.mixins.json" << 'EOF'
     "GameRendererMixin",
     "MouseMixin",
     "LightmapTextureManagerMixin",
-    "BackgroundRendererMixin",
     "HeldItemRendererMixin",
     "ItemRendererMixin"
   ],
